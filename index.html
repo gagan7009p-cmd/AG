@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Laddo 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6eb; /* Light pink theme */
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: #4a0010;
+        }
+
+        /* Background Floating Hearts */
+        .bg-heart {
+            position: absolute;
+            font-size: 20px;
+            animation: floatUp linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { transform: translateY(-20vh) scale(1.2); opacity: 0; }
+        }
+
+        /* Balloon Container */
+        #balloon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: opacity 0.3s ease;
+        }
+
+        .balloon {
+            width: 120px;
+            height: 150px;
+            background: #ff4d79;
+            border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+            position: relative;
+            box-shadow: inset -15px -15px 20px rgba(0,0,0,0.15), 0 10px 20px rgba(255, 77, 121, 0.4);
+            animation: floatBalloon 2s ease-in-out infinite alternate;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .balloon:hover {
+            transform: scale(1.05);
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 18px solid #ff4d79;
+        }
+
+        .string {
+            width: 2px;
+            height: 80px;
+            background: rgba(0,0,0,0.3);
+            margin-top: 10px;
+            animation: floatBalloon 2s ease-in-out infinite alternate;
+        }
+
+        .tap-text {
+            margin-top: 20px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #ff4d79;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes floatBalloon {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        /* Message Box */
+        #message-container {
+            display: none;
+            max-width: 650px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(255, 77, 121, 0.2);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.8);
+            margin: 20px;
+        }
+
+        .show-message {
+            display: block !important;
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        @keyframes popIn {
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .paragraph {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #5a1a28;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .highlight-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2rem;
+            color: #ff4d79;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Burst Hearts */
+        .burst-heart {
+            position: absolute;
+            font-size: 25px;
+            pointer-events: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bg-hearts"></div>
+
+    <div id="balloon-container" onclick="popBalloon()">
+        <div class="balloon"></div>
+        <div class="string"></div>
+        <div class="tap-text">Pop me, Kakku! 🎈</div>
+    </div>
+
+    <div id="message-container">
+        <div class="highlight-text">For My Beautiful World 💖</div>
+        <div class="paragraph">
+            Kakkku i know last night bad si and we both don’t like idda sad sad hona and even sadly and off mood ch sona jaaan and you mean an entire world to me and kal raat i felt ki my world is sad and my everything is off and low , kakku oh sari gallla chhodo mere putt your gagani loves you soo much from the bottom of my heart mer molle.<br><br>
+            
+            I know sometimes ( in-fact mostly ) i overthink and make the situation worse and i am sorry for that and haan don’t feel bad ki i am saying sorry ladddo because i should be sorry mere bachee this is how a bestest and healthy relationship works kii i felt ki main negative krta hu to i will be sorry for that kakkku , i want ki mera world , my everything that is youuu to be happy and have a big smile on your beautiful face laddo….<br><br>
+            
+            You can see it as apology frim your buggu because kahi na kahi i feel ki meri glti hai main overthinking me aake zada krdeta hu or you cal also see it as a message from your buggu to make things better and everything acha acha just like before to make everything fine and all good…putt i loveee you sooo much and i will forever lovee you till the end of my life i am just yours…jaaan our bond , our lovee is way tooo special…ye silly negative baate can do nothing to us jaaan….<br><br>
+            
+            And haan i know ye faltu baate unintentionally hojati hai jaaan and i understand you mere bache i understand your side meri molle i know ye sab faltu cheeze unintentionally hojati hai mere putt i understand mere shone bache i am your hubby meri molle your partner i assure you ki i understand you meri molle kabhi meri overthinking ki wajah se aise na sochna ki main smjh ni rha mere putt…<br><br>
+            
+            Mere bache i know maine raat ko kafi faltu bhi react kiya like wo number wali baat and haan wo anxity to thodi si hui thi bas thodi der liye hand se shake ho rhe the and baad ch chest heavy lg rhi thi to chest pe maine punch sa kiya ki thoda thik sa hojaye but fir halka sa pain hone lga tha wo apka bugggu dumbo hai na pta ni socha ki punch sa krke chest thik si hogi but pain hone lga tha but haan wo bas halka halka sa tha and haaan ye anxiety wali feeling bas bilkul thodi der liye thi achaa chhodo ye baat.<br><br>
+            
+            Main bol rha tha ki haan i know maine raat faltu baate ki jis se obvious hai apko hurt hua bura lga and seriously uske liye main kuch bhi punishment leluga i apologise for that putt bas mera bacha man ch koi baat leke sad na feel kre bas mera bacha khush rhe 🥺🥺😁🧿💖❤️🥰✨💗🐣 mere cuutie se putt mood acha krege hum and sab happy happy rkhege😁😚❤️💖🫂🧿😘🥰💗
+        </div>
+        
+        <div class="paragraph" style="text-align: center; font-weight: 600; font-size: 1.1rem;">
+            Laddo your buggu lovessssss youuuu sooooo sooooo much mere shone putt🥺😁💗🥰😘🧿❤️💖🫂<br><br>
+            Mere shona kakka sad hota hai to aisa lgta hai ki mera sab kuch off hai💗🥺😁🥰🫂❤️🧿😘💖<br><br>
+            <span style="font-size: 1.3rem; color: #ff4d79;">Now let’s make everything happy happy and achaa achaa haana mere shone se noneee kakkee💗🥺😁🥰💖😘❤️🫂🧿</span>
+        </div>
+    </div>
+
+    <script>
+        // 1. Generate Floating Background Hearts
+        const heartsArr = ['💖', '❤️', '💗', '🤍', '💕'];
+        const bgContainer = document.getElementById('bg-hearts');
+        
+        for(let i = 0; i < 35; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('bg-heart');
+            heart.innerText = heartsArr[Math.floor(Math.random() * heartsArr.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 10 + 5) + 's';
+            heart.style.animationDelay = (Math.random() * 5) + 's';
+            heart.style.opacity = Math.random() * 0.6 + 0.2;
+            heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+            bgContainer.appendChild(heart);
+        }
+
+        // 2. Balloon Pop & Heart Burst Logic
+        function popBalloon() {
+            // Hide balloon
+            document.getElementById('balloon-container').style.display = 'none';
+            
+            // Create Burst Hearts
+            createBurst();
+
+            // Show Message after a tiny delay for the burst effect
+            setTimeout(() => {
+                const msg = document.getElementById('message-container');
+                msg.classList.add('show-message');
+            }, 300);
+        }
+
+        function createBurst() {
+            for (let i = 0; i < 40; i++) {
+                let burst = document.createElement('div');
+                burst.classList.add('burst-heart');
+                burst.innerText = heartsArr[Math.floor(Math.random() * heartsArr.length)];
+                document.body.appendChild(burst);
+
+                // Start from center
+                burst.style.left = '50%';
+                burst.style.top = '50%';
+                burst.style.transform = 'translate(-50%, -50%)';
+
+                // Animate outwards randomly
+                let angle = Math.random() * Math.PI * 2;
+                let velocity = 100 + Math.random() * 150;
+                let tx = Math.cos(angle) * velocity;
+                let ty = Math.sin(angle) * velocity;
+
+                burst.animate([
+                    { transform: 'translate(-50%, -50%) scale(1)', opacity: 1 },
+                    { transform: `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(1.5)`, opacity: 0 }
+                ], {
+                    duration: 1000 + Math.random() * 500,
+                    easing: 'cubic-bezier(0, .9, .57, 1)'
+                });
+
+                // Remove from DOM after animation
+                setTimeout(() => burst.remove(), 1500);
+            }
+        }
+    </script>
+</body>
+</html>
